@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
+
 
 void main() {
   runApp(MaterialApp(home: pageview(),));
@@ -24,7 +26,7 @@ class pageview extends StatelessWidget {
             children: [
               Container(
                 color: Colors.grey[300],
-                child: Column(children: [Text('Page 1'),
+                child: Column(children: [
                  Column(
                    children: [
                      Row(
@@ -32,7 +34,7 @@ class pageview extends StatelessWidget {
                        mainAxisAlignment: MainAxisAlignment.end,
                        children: [
                              Container(
-                               padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+                               padding: EdgeInsets.fromLTRB(0, 15, 20, 0),
                                child: OutlinedButton(
                                  style: OutlinedButton.styleFrom(
                                      elevation: 0,
@@ -49,7 +51,7 @@ class pageview extends StatelessWidget {
                              ),
                            ],
                      ),
-                     SizedBox(height: 50),
+                     SizedBox(height: 35),
                      Container(
                        padding: EdgeInsets.fromLTRB(20, 50, 20, 20),
                        height: 280.0,
@@ -69,20 +71,41 @@ class pageview extends StatelessWidget {
                            SizedBox(width:20),
                            Text('What is Mental Health?', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 25),)]
                      ),
-                     //Padding(padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+                     Padding(padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                      child: ReadMoreText(
+                        'It runs 11,000 trains every day on tracks that spread over 60,000 km in length. It employs close to 1.54 million people, making it the seventh-largest employer in the world, according to Forbes.',
+                        style: TextStyle(
+                          color: Colors.black45,
+                          wordSpacing: 0.25,
+                          fontSize: 18
+                        ),
+                        trimLines: 2,
+                        textAlign: TextAlign.left,
+                        trimMode: TrimMode.Line,
+                        trimCollapsedText: '...Show More',
+                        trimExpandedText: 'Show Less',
+                        moreStyle:  (
+                            TextStyle(color: Colors.blue,)
+                        ),
+                        lessStyle: (
+                        TextStyle(color: Colors.blue,)
+                        ),
+                      ),
+                     ),
                      Row(
 
                        mainAxisAlignment: MainAxisAlignment.start,
                        children: [
                          SizedBox(width: 15,height: 30,),
                          Container(
-                             padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+                             padding: EdgeInsets.fromLTRB(0, 20, 20, 0),
                              child: OutlinedButton(
                                style: OutlinedButton.styleFrom(
                                    elevation: 0,
-                                   padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                                   padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
                                    backgroundColor: Colors.white,
                                    shape: RoundedRectangleBorder(
+                                       side: BorderSide(width:10,color: Colors.purple),
                                        borderRadius: BorderRadius.circular(20))),
                                child: const Text(
                                  'Next',
@@ -98,17 +121,198 @@ class pageview extends StatelessWidget {
                 ]),
               ),
               Container(
-                color: Colors.red,
-                child: Text('Page 2'),
+                color: Colors.grey[300],
+                child: Column(children: [
+                  Column(
+                    children: [
+                      Row(
+
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Container(
+                              padding: EdgeInsets.fromLTRB(0, 15, 20, 0),
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                    elevation: 0,
+                                    padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                                    backgroundColor: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(20))),
+                                child: const Text(
+                                  'Skip',
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                                onPressed: () {},
+                              )
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 15),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(10,0, 10, 20),
+                        height: 300.0,
+                        width: 340.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(
+                                'assets/rafiki.png'),
+                            fit: BoxFit.fill,
+                          ),
+                          shape: BoxShape.rectangle,
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      Row(
+                          children: [
+                            SizedBox(width:20),
+                            Text('How will this App help you?', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 25),)]
+                      ),
+                      Padding(padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                        child: ReadMoreText(
+                          'It runs 11,000 trains every day on tracks that spread over 60,000 km in length. It employs close to 1.54 million people, making it the seventh-largest employer in the world, according to Forbes.',
+                          style: TextStyle(
+                              color: Colors.black45,
+                              wordSpacing: 0.25,
+                              fontSize: 18
+                          ),
+                          trimLines: 2,
+                          textAlign: TextAlign.left,
+                          trimMode: TrimMode.Line,
+                          trimCollapsedText: '...Show More',
+                          trimExpandedText: 'Show Less',
+                          moreStyle:  (
+                              TextStyle(color: Colors.blue,)
+                          ),
+                          lessStyle: (
+                              TextStyle(color: Colors.blue,)
+                          ),
+                        ),
+                      ),
+                      Row(
+
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SizedBox(width: 15,height: 30,),
+                          Container(
+                              padding: EdgeInsets.fromLTRB(0, 20, 20, 0),
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                    elevation: 0,
+                                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+                                    backgroundColor: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                        side: BorderSide(width:10,color: Colors.purple),
+                                        borderRadius: BorderRadius.circular(20))),
+                                child: const Text(
+                                  'Next',
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                                onPressed: ()=>controller.nextPage(duration: Duration(milliseconds: 400), curve: Curves.easeInOut),
+                              )
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                ]),
               ),
               Container(
-                color: Colors.white,
-                child: Text('Page 3'),
+                color: Colors.grey[300],
+                child: Column(children: [
+                  Column(
+                    children: [
+                      Row(
+
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Container(
+                              padding: EdgeInsets.fromLTRB(0, 15, 20, 0),
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                    elevation: 0,
+                                    padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                                    backgroundColor: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(20))),
+                                child: const Text(
+                                  'Skip',
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                                onPressed: () {},
+                              )
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 15),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(10,0, 10, 20),
+                        height: 300.0,
+                        width: 340.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage(
+                                'assets/aaruush.png'),
+                            fit: BoxFit.fill,
+                          ),
+                          shape: BoxShape.rectangle,
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      Row(
+                          children: [
+                            SizedBox(width:20),
+                            Text('About Aaruush', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 25),)]
+                      ),
+                      Padding(padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                        child: ReadMoreText(
+                          'It runs 11,000 trains every day on tracks that spread over 60,000 km in length. It employs close to 1.54 million people, making it the seventh-largest employer in the world, according to Forbes.',
+                          style: TextStyle(
+                              color: Colors.black45,
+                              wordSpacing: 0.25,
+                              fontSize: 18
+                          ),
+                          trimLines: 2,
+                          textAlign: TextAlign.left,
+                          trimMode: TrimMode.Line,
+                          trimCollapsedText: '...Show More',
+                          trimExpandedText: 'Show Less',
+                          moreStyle:  (
+                              TextStyle(color: Colors.blue,)
+                          ),
+                          lessStyle: (
+                              TextStyle(color: Colors.blue,)
+                          ),
+                        ),
+                      ),
+                      Row(
+
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SizedBox(width: 15,height: 30,),
+                          Container(
+                              padding: EdgeInsets.fromLTRB(0, 20, 20, 0),
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                    elevation: 0,
+                                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
+                                    backgroundColor: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                        side: BorderSide(width:10,color: Colors.purple),
+                                        borderRadius: BorderRadius.circular(20))),
+                                child: const Text(
+                                  'Next',
+                                  style: TextStyle(color: Colors.grey),
+                                ),
+                                onPressed: ()=>controller.nextPage(duration: Duration(milliseconds: 400), curve: Curves.easeInOut),
+                              )
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                ]),
               ),
-              Container(
-                color: Colors.yellow,
-                child: Text('Page 4'),
-              ),
+
 
             ],
 
