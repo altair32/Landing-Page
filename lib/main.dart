@@ -9,11 +9,11 @@ void main() {
 
 class pageview extends StatelessWidget {
   final controller = PageController();
+
   @override
   void dispose(){
-    controller.dispose();
-
-
+   // controller.dispose();
+    //super.dispose();
   }
   @override
   Widget build(BuildContext context) {
@@ -23,6 +23,7 @@ class pageview extends StatelessWidget {
       body: Container(
         //padding: const EdgeInsets.only(bottom: 80),
           child: PageView(
+                  controller: controller,
             children: [
               Container(
                 color: Colors.grey[300],
@@ -46,7 +47,7 @@ class pageview extends StatelessWidget {
                                    'Skip',
                                    style: TextStyle(color: Colors.grey),
                                  ),
-                                 onPressed: () {},
+                                 onPressed: ()=>controller.jumpToPage(2),
                                )
                              ),
                            ],
@@ -142,7 +143,7 @@ class pageview extends StatelessWidget {
                                   'Skip',
                                   style: TextStyle(color: Colors.grey),
                                 ),
-                                onPressed: () {},
+                                onPressed: ()=>controller.jumpToPage(2),
                               )
                           ),
                         ],
