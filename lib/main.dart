@@ -100,20 +100,20 @@ class pageview extends StatelessWidget {
                          SizedBox(width: 15,height: 30,),
                          Container(
                              padding: EdgeInsets.fromLTRB(0, 20, 20, 0),
-                             child: OutlinedButton(
-                               style: OutlinedButton.styleFrom(
-                                   elevation: 0,
-                                   padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-                                   backgroundColor: Colors.white,
-                                   shape: RoundedRectangleBorder(
-                                       side: BorderSide(width:10,color: Colors.purple),
-                                       borderRadius: BorderRadius.circular(20))),
-                               child: const Text(
-                                 'Next',
-                                 style: TextStyle(color: Colors.grey),
-                               ),
+                             child: RaisedButton(
+                               elevation: 0,
+                               textColor: Colors.grey[600],
+                               color: Colors.white54,
+                               highlightColor: Colors.blueAccent,
+                               child: Text("Next"),
                                onPressed: ()=>controller.nextPage(duration: Duration(milliseconds: 400), curve: Curves.easeInOut),
-                             )
+                               shape: new RoundedRectangleBorder(
+                                 side: BorderSide(
+                                   color: Colors.purpleAccent,
+                                 ),
+                                 borderRadius: new BorderRadius.circular(30.0),
+                               ),
+                             ),
                          ),
                        ],
                      ),
@@ -122,7 +122,7 @@ class pageview extends StatelessWidget {
                 ]),
               ),
               Container(
-                color: Colors.grey[300],
+                color: Color(0xDBDCE8FF),
                 child: Column(children: [
                   Column(
                     children: [
@@ -132,18 +132,19 @@ class pageview extends StatelessWidget {
                         children: [
                           Container(
                               padding: EdgeInsets.fromLTRB(0, 15, 20, 0),
-                              child: OutlinedButton(
-                                style: OutlinedButton.styleFrom(
-                                    elevation: 0,
-                                    padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                                    backgroundColor: Colors.white,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(20))),
-                                child: const Text(
-                                  'Skip',
-                                  style: TextStyle(color: Colors.grey),
-                                ),
+                              child: RaisedButton(
+                                elevation: 0,
+                                textColor: Colors.grey[600],
+                                color: Colors.white54,
+                                highlightColor: Colors.blueAccent,
+                                child: Text("Skip"),
                                 onPressed: ()=>controller.jumpToPage(2),
+                                shape: new RoundedRectangleBorder(
+                                  side: BorderSide(
+                                    color: Colors.purpleAccent,
+                                  ),
+                                  borderRadius: new BorderRadius.circular(30.0),
+                                ),
                               )
                           ),
                         ],
@@ -196,19 +197,19 @@ class pageview extends StatelessWidget {
                           SizedBox(width: 15,height: 30,),
                           Container(
                               padding: EdgeInsets.fromLTRB(0, 20, 20, 0),
-                              child: OutlinedButton(
-                                style: OutlinedButton.styleFrom(
-                                    elevation: 0,
-                                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-                                    backgroundColor: Colors.white,
-                                    shape: RoundedRectangleBorder(
-                                        side: BorderSide(width:10,color: Colors.purple),
-                                        borderRadius: BorderRadius.circular(20))),
-                                child: const Text(
-                                  'Next',
-                                  style: TextStyle(color: Colors.grey),
-                                ),
+                              child: RaisedButton(
+                                elevation: 0,
+                                textColor: Colors.grey[600],
+                                color: Colors.white54,
+                                highlightColor: Colors.blueAccent,
+                                child: Text("Next"),
                                 onPressed: ()=>controller.nextPage(duration: Duration(milliseconds: 400), curve: Curves.easeInOut),
+                                shape: new RoundedRectangleBorder(
+                                  side: BorderSide(
+                                    color: Colors.purpleAccent,
+                                  ),
+                                  borderRadius: new BorderRadius.circular(30.0),
+                                ),
                               )
                           ),
                         ],
@@ -218,7 +219,7 @@ class pageview extends StatelessWidget {
                 ]),
               ),
               Container(
-                color: Colors.grey[300],
+                color: Color(0xDBDCE8FF),
                 child: Column(children: [
                   Column(
                     children: [
@@ -228,18 +229,19 @@ class pageview extends StatelessWidget {
                         children: [
                           Container(
                               padding: EdgeInsets.fromLTRB(0, 15, 20, 0),
-                              child: OutlinedButton(
-                                style: OutlinedButton.styleFrom(
-                                    elevation: 0,
-                                    padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                                    backgroundColor: Colors.white,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(20))),
-                                child: const Text(
-                                  'Skip',
-                                  style: TextStyle(color: Colors.grey),
+                              child: RaisedButton(
+                                elevation: 0,
+                                textColor: Colors.grey[600],
+                                color: Colors.white54,
+                                highlightColor: Colors.blueAccent,
+                                child: Text("Skip"),
+                                onPressed: ()=>controller.jumpToPage(2),
+                                shape: new RoundedRectangleBorder(
+                                  side: BorderSide(
+                                    color: Colors.purpleAccent,
+                                  ),
+                                  borderRadius: new BorderRadius.circular(30.0),
                                 ),
-                                onPressed: () {},
                               )
                           ),
                         ],
@@ -292,20 +294,6 @@ class pageview extends StatelessWidget {
                           SizedBox(width: 15,height: 30,),
                           Container(
                               padding: EdgeInsets.fromLTRB(0, 20, 20, 0),
-                              child: OutlinedButton(
-                                style: OutlinedButton.styleFrom(
-                                    elevation: 0,
-                                    padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 5),
-                                    backgroundColor: Colors.white,
-                                    shape: RoundedRectangleBorder(
-                                        side: BorderSide(width:10,color: Colors.purple),
-                                        borderRadius: BorderRadius.circular(20))),
-                                child: const Text(
-                                  'Next',
-                                  style: TextStyle(color: Colors.grey),
-                                ),
-                                onPressed: ()=>controller.nextPage(duration: Duration(milliseconds: 400), curve: Curves.easeInOut),
-                              )
                           ),
                         ],
                       ),
