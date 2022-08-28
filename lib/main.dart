@@ -26,7 +26,7 @@ class pageview extends StatelessWidget {
                   controller: controller,
             children: [
               Container(
-                color: Colors.grey[300],
+                color: Color(0xDBDCE8FF),
                 child: Column(children: [
                  Column(
                    children: [
@@ -36,19 +36,20 @@ class pageview extends StatelessWidget {
                        children: [
                              Container(
                                padding: EdgeInsets.fromLTRB(0, 15, 20, 0),
-                               child: OutlinedButton(
-                                 style: OutlinedButton.styleFrom(
-                                     elevation: 0,
-                                     padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                                     backgroundColor: Colors.white,
-                                     shape: RoundedRectangleBorder(
-                                         borderRadius: BorderRadius.circular(20))),
-                                 child: const Text(
-                                   'Skip',
-                                   style: TextStyle(color: Colors.grey),
-                                 ),
+                               child: RaisedButton(
+                                 elevation: 0,
+                                 textColor: Colors.grey[600],
+                                 color: Colors.white54,
+                                 highlightColor: Colors.blueAccent,
+                                 child: Text("Skip"),
                                  onPressed: ()=>controller.jumpToPage(2),
-                               )
+                                 shape: new RoundedRectangleBorder(
+                                   side: BorderSide(
+                                     color: Colors.purpleAccent,
+                                   ),
+                                   borderRadius: new BorderRadius.circular(30.0),
+                                 ),
+                               ),
                              ),
                            ],
                      ),
